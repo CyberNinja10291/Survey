@@ -1,0 +1,25 @@
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+    <!-- Start Point Form -->
+    <form method="post" enctype="multipart/form-data" href="{% url 'submit_data' %}">
+        {% csrf_token %}
+        <h3 id="start_form">
+            {{ startpoint_form.as_p }}
+        </h3>
+        <!-- <p>{{ start_form.start_point_chainage.label_tag }} {{ start_form.start_point_chainage }}</p>
+        <p>{{ start_form.location.label_tag }} {{ start_form.location }}</p>
+        <p>{{ start_form.photo.label_tag }} {{ start_form.photo }}</p> -->
+
+        <button class="btn btn--main" href="{% url 'submit_data' %}">Submit</button>
+    </form>
+
+    <!-- Display success message if it exists -->
+    {% if success_message %}
+        <div class="success-message">{{ success_message }}</div>
+    {% endif %}
