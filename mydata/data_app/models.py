@@ -6,10 +6,10 @@ from django.db import models
 class MyModel(models.Model):
     start_point_chainage = models.CharField(max_length=100, verbose_name="Start Point Chainage", null=True, blank=True)
     end_point_chainage = models.CharField(max_length=100, verbose_name="End Point Chainage", null=True, blank=True)
-    activity_type = models.CharField(max_length=100, verbose_name="Activity Type", null=True, blank=True)
+    activitytype = models.CharField(max_length=100, verbose_name="Activity Type", null=True, blank=True)
     equipment = models.CharField(max_length=100, verbose_name="Equipment", null=True, blank=True)
     site = models.CharField(max_length=100, verbose_name="Site", null=True, blank=True)
-    activity_category = models.CharField(max_length=255, verbose_name="activity_category", null=True, blank=True)
+    activitycategory = models.CharField(max_length=255, verbose_name="activity_category", null=True, blank=True)
     employee = models.CharField(max_length=100, verbose_name="Employee", null=True, blank=True)
     employee_role = models.CharField(max_length=100, verbose_name="Employee Role", null=True, blank=True)
     my_date = models.DateField(verbose_name="My Date", null=True, blank=True)
